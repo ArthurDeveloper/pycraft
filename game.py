@@ -3,6 +3,7 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 from ursina.shaders import lit_with_shadows_shader
 
 game = Ursina()
+window.fullscreen = True
 
 current_block_color = color.white
 
@@ -22,7 +23,6 @@ class Block(Button):
                 destroy(self)
             elif key == 'right mouse down':
                 new_block = Block(position=self.position + mouse.normal)
-            print('destroy')
 
 
 def generate_blocks():
